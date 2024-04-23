@@ -3,5 +3,7 @@ This plugin allows user to visually select icons for usage with the [Icon - Nuxt
 
 ## Screenshots
 
+<img src="capture1.png" alt="screenshot 1" width="300"/>
+<img src="capture2.png" alt="screenshot 2" width="300"/>
 ![capture1](capture1.png)
 ![capture2](capture2.png)
