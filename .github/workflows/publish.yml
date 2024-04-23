@@ -12,12 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install --prefix src/
-
-      - name: Build plugin
-        run: npm run build --prefix src/
-
       - name: Publish to NPM
         run: |
           cd src/
