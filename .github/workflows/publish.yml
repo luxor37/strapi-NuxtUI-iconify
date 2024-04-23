@@ -5,7 +5,7 @@ on:
     types: [published]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,8 +14,8 @@ jobs:
 
       - name: Publish to NPM
         run: |
-          cd src/
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+          cd src
+          npm config set _authToken=${{ secrets.NPM_AUTH_TOKEN }}
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
