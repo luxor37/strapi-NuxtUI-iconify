@@ -1,0 +1,30 @@
+name: NPM Publish
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: ./app/
+          platforms: linux/amd64
+          file: ./app/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/manualudem:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/manualudem:latest
+          cache-to: type=inline
+          build-args: |
+            PUBLIC_VAPID_KEY=${{ secrets.PUBLIC_VAPID_KEY }}
+            STRAPI_URL=${{ secrets.STRAPI_URL }}
+            NUXT_UI_PRO_LICENSE=${{ secrets.NUXT_UI_PRO_LICENSE }}
+            RECAPTCHA_SITE_KEY=${{ secrets.RECAPTCHA_SITE_KEY }}
