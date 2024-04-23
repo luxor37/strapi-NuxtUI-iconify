@@ -1,8 +1,12 @@
 name: Publish to NPM
 
+# on:
+#   release:
+#     types: [published]
+
 on:
-  release:
-    types: [published]
+  push:
+    branches: ["main"]
 
 jobs:
   publish:
@@ -15,7 +19,7 @@ jobs:
       - name: Publish to NPM
         run: |
           cd src
-          npm config set _authToken=${{ secrets.NPM_AUTH_TOKEN }}
+          npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}
           npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
