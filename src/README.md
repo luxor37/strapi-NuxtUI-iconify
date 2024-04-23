@@ -1,3 +1,3 @@
 # Strapi plugin icons
 
-A quick description of icons.
+Full docs on (github)[https://github.com/luxor37/strapi-NuxtUI-iconify/blob/main/README.md]
