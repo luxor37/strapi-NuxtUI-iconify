@@ -18,14 +18,14 @@ export default {
 
     app.customFields.register({
       name: "nuxticon",
-      pluginId: "nuxticon",
+      pluginId: "strapi-nuxtui-icon",
       type: "string",
       intlLabel: {
-        id: "nuxticon.map.label",
+        id: "strapi-nuxtui-icon.map.label",
         defaultMessage: "NuxtIcon",
       },
       intlDescription: {
-        id: "nuxticon.map.description",
+        id: "strapi-nuxtui-icon.map.description",
         defaultMessage: "",
       },
       icon: PluginIcon,

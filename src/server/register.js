@@ -3,7 +3,7 @@
 module.exports = ({ strapi }) => {
   strapi.customFields.register({
     name: "nuxticon",
-    plugin: "nuxticon",
+    plugin: "strapi-nuxtui-icon",
     type: "string"
   });
 };

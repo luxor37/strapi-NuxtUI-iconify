@@ -3,10 +3,10 @@
   "version": "1.0.2",
   "description": "This is the description of the plugin.",
   "strapi": {
-    "name": "nuxticons",
+    "name": "strapi-nuxtui-icon",
     "description": "Easy icon selector for NuxtUI Icons with icons from Iconify using https://icones.js.org.",
     "kind": "plugin",
-    "displayName": "NuxtIcons"
+    "displayName": "Nuxt Icons"
   },
   "repository": {
     "type": "git",
