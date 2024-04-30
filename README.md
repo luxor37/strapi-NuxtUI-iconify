@@ -23,8 +23,11 @@ No specific configuration needed for now.
 ```javascript
 module.exports = ({ env }) => ({
   // ...
-  strapi-nuxtui-icon: {
+  nuxticons: {
     enabled: true,
+    config: {
+      /*No Config for now */
+    },
   },
   // ...
 });
@@ -37,6 +40,13 @@ To use this plugin in your strapi app, simply add the custom field to one of you
 You can now use the `Select Heroicon` button to view and select an icon from the heroicon library (contributions for more libraries are welcome).
 
 You can also type in manually the icon you need from [icones.js](https://icones.js.org/)
+
+```javascript
+"icon": {
+  "type": "customField",
+  "customField": "plugin::nuxticon.nuxticon"
+}
+```
 
 ### Front end
 
